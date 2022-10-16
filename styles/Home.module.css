@@ -1,5 +1,9 @@
 .container {
+  min-height: 100%;
+  max-height: auto;
+  background-color: #f2f2f2;
   font-family: 'League Spartan', sans-serif;
+  padding: 32px 24px;
 }
 
 .main {
@@ -10,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .footer {

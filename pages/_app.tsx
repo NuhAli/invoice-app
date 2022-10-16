@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import NavBar from "../components/NavBar";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -82,6 +83,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
+      <NavBar />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
