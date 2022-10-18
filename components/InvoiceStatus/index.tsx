@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, StatusIndicator, StatusText } from "./styles";
 
 interface IStatusProp {
-  status: "paid" | "pending" | "draft";
+  status: string;
 }
 
 const InvoiceStatus = ({ status }: IStatusProp) => {
@@ -11,14 +11,14 @@ const InvoiceStatus = ({ status }: IStatusProp) => {
 
   useEffect(() => {
     if (status === "paid") {
-      setBackground("rgba(51, 214, 159, 0.1)");
+      setBackground("rgba(51, 214, 159, 0.04)");
       setFontColor("#33D69F");
     } else if (status === "pending") {
-      setBackground("rgba(255,143,0,0.1)");
+      setBackground("rgba(255,143,0,0.04)");
       setFontColor("#ff8f00");
     } else if (status === "draft") {
-      setBackground("rgba(255,143,0,0.1)");
-      setFontColor("#ff8f00");
+      setBackground("rgba(55, 59, 83, 0.04)");
+      setFontColor("#373B53");
     }
   }, [, status]);
 

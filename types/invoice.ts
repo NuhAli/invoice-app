@@ -1,3 +1,5 @@
+import { ParsedUrlQuery } from "querystring";
+
 export interface IInvoice {
   id: string;
   createdAt: string;
@@ -25,4 +27,8 @@ export interface Item {
   quantity: number;
   price: number;
   total: number;
+}
+
+export interface IInvoicePageProps {
+  currentInvoice: IInvoice;
 }

@@ -4,6 +4,9 @@ import NavBar from "../components/NavBar";
 
 const GlobalStyle = createGlobalStyle`
   body {
+    background-color: #f2f2f2;
+  font-family: 'League Spartan', sans-serif;
+    height: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,7 +36,7 @@ const theme = {
       lineHeight: 36,
       letterSpacing: -1,
       textAlign: "left",
-      color: "#0C0E16"
+      color: "#0C0E16",
     },
     h2: {
       fontStyle: "normal",
@@ -41,7 +44,7 @@ const theme = {
       fontSize: 20,
       lineHeight: 22,
       letterSpacing: -0.625,
-      color: "#0C0E16"
+      color: "#0C0E16",
     },
     h3: {
       fontStyle: "normal",
@@ -49,7 +52,7 @@ const theme = {
       fontSize: 16,
       lineHeight: 24,
       letterSpacing: -0.8,
-      color: "#0C0E16"
+      color: "#0C0E16",
     },
     h4: {
       fontStyle: "normal",
@@ -57,7 +60,7 @@ const theme = {
       fontSize: 12,
       lineHeight: 15,
       letterSpacing: -0.25,
-      color: "#0C0E16"
+      color: "#0C0E16",
     },
     body1: {
       fontStyle: "normal",
@@ -65,7 +68,7 @@ const theme = {
       fontSize: 12,
       lineHeight: 15,
       letterSpacing: -0.25,
-      color: "#0C0E16"
+      color: "#0C0E16",
     },
     body2: {
       fontStyle: "normal",
@@ -73,8 +76,8 @@ const theme = {
       fontSize: 12,
       lineHeight: 15,
       letterSpacing: -0.25,
-      color: "#0C0E16"
-    }
+      color: "#0C0E16",
+    },
   },
 };
 
@@ -83,7 +86,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-      <NavBar />
+        <NavBar />
         <Component {...pageProps} />
       </ThemeProvider>
     </>

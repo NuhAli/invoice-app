@@ -7,13 +7,14 @@ import { initalItems } from "../data";
 import Image from "next/image";
 
 const InvoiceArea = styled.section`
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 32px 0;
+  margin: 0 24px;
 `;
 
 const IconDescription = styled.div`
@@ -74,12 +75,11 @@ const Home: NextPage = () => {
       );
     }
   };
+
   return (
     <div className={styles.container}>
       <TaskBar />
-      <InvoiceArea>
-        {renderInvoices()}
-      </InvoiceArea>
+      <InvoiceArea>{renderInvoices()}</InvoiceArea>
     </div>
   );
 };
